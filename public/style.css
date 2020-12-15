@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 :root {
     --color-black: black;
     --color-yellow: #E8BE00;
@@ -5,4 +7,83 @@
     --color-destaque: #03788d;
     --color-white: white;
     --color-gelo: #e3e9eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    background-color: var(--color-black);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 35px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.links a {
+    color: var(--color-gelo);
+    font-size: 20px;
+    margin: 10px;
+    line-height: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.link a.active {
+    font-weight: bold;
+    color: var(--color-yellow);
+}
+
+.links a:hover {
+    color: var(--color-yellow);
+}
+
+.links a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--color-yellow);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 200ms ease-in-out;
+    
+}
+
+/*== Instructors ==*/
+
+.cards {
+    background-color: var(--color-white);
+    width: 650px;
+    height: 500px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.avatar {
+    width: 350px;
+}
+
+
+/*==Plans==*/
+
+.plans {
+    background-color: var(--color-white);
+    width: 330px;
+    height: 500px;
+    display: inline-block;
 }
