@@ -1,0 +1,1 @@
+import imageHome from 'img/foto1.png';
